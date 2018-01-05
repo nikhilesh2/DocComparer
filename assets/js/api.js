@@ -55,10 +55,9 @@ function getData(fName, lName) {
 
 
 $('.doctorList').on('click', '.sbx-custom__reset2', function() {
-
-    console.log($(this).parent().index());
-    npiList.splice($(this).parent().index(), 1);
-    doctorList.splice($(this).parent().index(), 1);
+    const indexToRemove = $(this).parent().parent().index();
+    npiList.splice(indexToRemove, 1);
+    doctorList.splice(indexToRemove, 1);
     $(this).parent().remove();
     renderCharts();
 });
