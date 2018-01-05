@@ -28,21 +28,16 @@ app.get('/data', (req, res) => {
 			second_result = JSON.parse(second_result);
 			second_result = JSON.stringify(second_result.results);
 			// console.log(JSON.parse(query));
-			query = JSON.parse(query);
-			for(var item in second_result) {
-				query.concat(item);
-			}
+			// query = JSON.parse(query);
+			// for(var item in second_result) {
+			// 	query.concat(item);
+			// }
 		
 			res.end(query);
 		})
 	});
 
-	// request.get('https://npiregistry.cms.hhs.gov/api?first_name=' + req.query.lName + '&pretty=true',function(err,re,body){
- //  		if(err) console.log(err);
- //  		else 	{ lNameQuery = body };
-	// });
 
-	//res.end(fNameQuery.concat(lNameQuery));
 });
 
 
@@ -52,10 +47,7 @@ function getData(fName, lName){
   		if(err) reject(err);
   		else 	fulfill(body);
 	})
-    // fs.readFile(filename, enc, function (err, res){
-    //   if (err) reject(err);
-    //   else fulfill(res);
-    // });
+
   });
 }
 
