@@ -15,26 +15,26 @@ app.get('/data', (req, res) => {
 
 	var fName = req.query.fName;
 	var lName = req.query.lName;
-	console.log(fName);
-	console.log(lName);
+	
 	getData(fName, lName).then(function(first_result) {
-		// query.concat(first_result);
-		console.log(JSON.stringify(first_result).results);
-		query = JSON.parse(first_result);
-		query = JSON.stringify(query.results);
 
-		getData(lName, fName).then(function(second_result) {
-			// console.log(JSON.parse(second_result).results);
-			second_result = JSON.parse(second_result);
-			second_result = JSON.stringify(second_result.results);
-			// console.log(JSON.parse(query));
-			// query = JSON.parse(query);
-			// for(var item in second_result) {
-			// 	query.concat(item);
-			// }
+		// // query.concat(first_result);
+		// console.log(JSON.stringify(first_result).results);
+		// query = JSON.parse(first_result);
+		// query = JSON.stringify(query.results);
+
+		// getData(lName, fName).then(function(second_result) {
+		// 	// console.log(JSON.parse(second_result).results);
+		// 	second_result = JSON.parse(second_result);
+		// 	second_result = JSON.stringify(second_result.results);
+		// 	// console.log(JSON.parse(query));
+		// 	// query = JSON.parse(query);
+		// 	// for(var item in second_result) {
+		// 	// 	query.concat(item);
+		// 	// }
 		
-			res.end(query);
-		})
+			res.end(first_result);
+		// })
 	});
 
 
