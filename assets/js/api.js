@@ -94,8 +94,8 @@ $('.doctorList').on('click', '.sbx-custom__reset2', function() {
 function renderCharts() {
 	var npis = npiList.toString();
 	$('#chart1').attr('src', 'http://docharts.niksingh.net/?npi=' + npis);
-	$('#chart2').attr('src', 'http://docharts.niksingh.net/?npi=' + npis);
-	$('#chart3').attr('src', 'http://docharts.niksingh.net/?npi=' + npis);
+	$('#chart2').attr('src', 'http://docharts.niksingh.net/?npi=' + npis + '&type=2');
+	// $('#chart3').attr('src', 'http://docharts.niksingh.net/?npi=' + npis);
 }
 function print(msg, val) {
 	console.log(msg + " " + JSON.stringify(val));
