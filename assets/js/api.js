@@ -79,6 +79,8 @@ $('.doctorList').on('click', '.sbx-custom__reset2', function() {
     			// var newItem = "<div class='row doctor'><p class='col' style='font-weight: 300; flex:'0.7'>"+ doctorList[index].label + "</p> <button type='reset' title='Clear the search query.'' class='sbx-custom__reset2 col' style='flex:0.3'><svg role='img' aria-label='Reset'> <use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#sbx-icon-clear-3'></use></svg></button></div>";
                 var newItem =  $('.doctorWrapper');
                 $('.doctor .doctorName').text(doctorList[index].label);
+                $('.doctor #npi').text("npi: " + doctorList[index].npi);
+                $('.doctor #city').text("city: " + doctorList[index].city);
                
     			inHTML += newItem.html(); 
 			});

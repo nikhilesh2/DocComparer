@@ -46,22 +46,61 @@
 			document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
 			</script>
 		</div>
+		<div class="row headLabel">
+			<p class="col"><strong>Doctors</strong></p>
+		</div>
 		<div class="doctorList row">
 			<div class="col"> 
-				
-				
-
-			</div>
-		</div>
-			<div class="doctorWrapper hide">
 				<div class="row doctor">
-					<p class="col doctorName"></p>
-					<button type="reset" title="Clear the search query." class="sbx-custom__reset2 col" style='width: 45px; align-items: center'>
+					<p class="col doctorName">Nikhilesh Singh</p>
+					<button type="reset" title="Clear the search query." class="sbx-custom__reset2 col" style='width: 30px; align-items: center'>
 						<svg role="img" aria-label="Reset">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-clear-3"></use>
 						</svg>
 					</button>
+					<div class="row">
+						<div class="col" style="flex: 1">
+							<div class="row attribute">
+								<p class="attributeText">npi: 123123123123</p>
+							</div>
+							<div class="row attribute">
+								<p class="attributeText">city: Sharon</p>
+							</div>
+						</div>
+					</div>
 				</div>
+				
+
+			</div>
+		</div>
+		<div class="row headLabel2">
+			<p class="col"><strong>Charts</strong></p>
+		</div>
+			<div class="doctorWrapper hide">
+				<div class="doctorList row">
+			<div class="col"> 
+				<div class="row doctor">
+					<p class="col doctorName"></p>
+					<button type="reset" title="Clear the search query." class="sbx-custom__reset2 col" style='width: 30px; align-items: center'>
+						<svg role="img" aria-label="Reset">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-clear-3"></use>
+						</svg>
+					</button>
+					<div class="row">
+						<div class="col" style="flex: 1">
+							<div class="row attribute">
+								<p class="attributeText" id="npi">npi: 123123123123</p>
+							</div>
+							<div class="row attribute">
+								<p class="attributeText" id="city">city: Sharon</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
 			</div>
 	
 	</div>
@@ -76,7 +115,7 @@
 				<iframe id="chart1" src="http://docharts.niksingh.net/?npi=1174590681,1932282936,1518929637,1942290853" width="100%"height="100%" frameBorder="0" ></iframe>
 			</div>
 			<div class="chart row">
-				<iframe id="chart2" src="http://docharts.niksingh.net/?npi=1174590681,1932282936,1518929637" width="100%"height="100%" frameBorder="0"></iframe>
+				<iframe id="chart2" src="http://docharts.niksingh.net/?npi=1174590681,1932282936,1518929637,1942290853&type=2" width="100%"height="100%" frameBorder="0"></iframe>
 			</div>
 			<!-- <div class="chart row">
 				<iframe id="chart3" src="http://docharts.niksingh.net/?npi=1174590681,1932282936,1518929637" width="100%"height="100%" frameBorder="0"></iframe>

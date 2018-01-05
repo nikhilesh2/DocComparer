@@ -13,6 +13,7 @@ body {
 p {
   font-family: 'Open Sans' !important;
   color: white;
+  font-weight: 400;
 }
 iframe {
   frameBorder: 0;
@@ -42,7 +43,7 @@ iframe {
     
 }
 .leftCol {
-  /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .doctorList {
   /*margin: 0 auto;*/
@@ -64,7 +65,29 @@ iframe {
   display: none;
 }
 .doctorName {
-  margin-left: 20px;
+  margin-left: 25px;
+}
+.attribute {
+  font-size: 14px;
+  margin-left: 35px;
+}
+.attributeText {
+  font-weight: 300;
+  font-size: 14px;
+}
+.headLabel {
+  margin-left: 0px;
+  height: 40px;
+  align-items: center;
+  padding-left: 10px;
+  border-left: 6px solid #44A4E6;
+}
+.headLabel2 {
+  margin-left: 0px;
+  height: 40px;
+  align-items: center;
+  padding-left: 10px;
+  border-left: 6px solid #FCCB70;
 }
 .charts {
   position: relative;
@@ -170,7 +193,6 @@ iframe {
   left: inherit;
   margin: 0;
   border: 0;
-  border-radius: 0 3px 3px 0;
   background-color: #fdcc69;
   padding: 0;
   width: 45px;
