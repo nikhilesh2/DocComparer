@@ -623,7 +623,7 @@
         },
         formatData: function(data) {
             const modifiedData =  $.map(data.results, function (item) {
-             console.log("ITEM IS " + item);
+
                 return {
                     label: item.basic.first_name + " " + item.basic.last_name,
                     value: item.basic.first_name + " " + item.basic.last_name,
@@ -713,7 +713,6 @@
                 if (groupBy){
                     html += formatGroup(suggestion, value, i);
                 }
-                console.log(suggestion.country_code);
                 html += '<div class="' + className + '" data-index="' + i + '">' + formatResult(suggestion, value, i) + '<span style="float: right; font-size: 12px">' + suggestion.city + ', ' + suggestion.state + '</span>' + '</div>';
             });
 
