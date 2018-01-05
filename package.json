@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/nikhilesh2/DocComparer#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "request": "^2.83.0"
   }
 }
