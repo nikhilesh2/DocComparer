@@ -8,6 +8,16 @@ var request=require('request');
 app.use(cors())
 app.use(express.static(__dirname + '/assets'));
 
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
+
+
+app.get('/', (req, res) => {
+     res.sendFile(path.join(__dirname+'/index.html'));
+})
 
 
 app.get('/data', (req, res) => {
@@ -45,26 +55,13 @@ function getData(fName, lName){
   return new Promise(function (fulfill, reject){
   	request.get('https://npiregistry.cms.hhs.gov/api?first_name=' + fName + '&last_name=' + lName + '&pretty=true',function(err,re,body){
   		if(err) reject(err);
-  		else 	fulfill(body);
+  		else fulfill(body);
+
 	})
 
   });
 }
 
-
-
-
-
-
-app.get('/', (req, res) => {
-     res.sendFile(path.join(__dirname+'/index.html'));
-})
-
-app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
 
 app.listen(port, (err) => {
   if (err) {
